@@ -2,7 +2,7 @@ const request = require('supertest');
 const app = require('../../app');
 const { loadPlanetsData } = require('../../model/planets.model');
 const {mongoConnect, mongoDisconnect} = require('../../services/mongo');
-const { loadPlanetsData } = require('../../model/planets.model');
+
 
 
 describe('Testing Launches Api', () => {
