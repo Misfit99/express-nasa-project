@@ -2,7 +2,7 @@ const request = require('supertest');
 const app = require('../../app');
 const { loadPlanetsData } = require('../../model/planets.model');
 const {mongoConnect, mongoDisconnect} = require('../../services/mongo');
-
+const { loadPlanetsData } = require('../../model/planets.model');
 
 
 describe('Testing Launches Api', () => {
@@ -10,7 +10,7 @@ describe('Testing Launches Api', () => {
     
     beforeAll(async () => {
         await mongoConnect();
-        //await loadPlanetsData();
+        await loadPlanetsData();
     });
 
     afterAll(async () => {
