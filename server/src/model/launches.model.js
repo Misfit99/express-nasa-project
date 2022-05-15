@@ -76,7 +76,7 @@ async function scheduleNewLaunch(launch) {
 
 
 async function abortLaunchById(launchId) { 
-    await launchesDatabase.updateOne({
+    const aborted = await launchesDatabase.updateOne({
         flightNumber: launchId,
     }, {
         upcoming: false,
